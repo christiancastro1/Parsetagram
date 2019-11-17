@@ -5,7 +5,7 @@
 //  Created by Christian Alexander Valle Castro on 11/16/19.
 //  Copyright © 2019 valle.co. All rights reserved.
 //
-
+import Parse
 import UIKit
 
 @UIApplicationMain
@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "Parsetagram"
+                configuration.server = "https://tranquil-journey-92126.herokuapp.com//parse"
+                  })
+              )
         return true
     }
 
