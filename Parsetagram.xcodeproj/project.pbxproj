@@ -17,6 +17,7 @@
 		AA42CF0023809BB200BFB199 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA42CEFF23809BB200BFB199 /* FeedViewController.swift */; };
 		AA42CF022380B0BF00BFB199 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA42CF012380B0BF00BFB199 /* CameraViewController.swift */; };
 		AA6E0F182380CEBE006BB207 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E0F172380CEBE006BB207 /* PostTableViewCell.swift */; };
+		AA9E4F2B23877B1300065A65 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E4F2A23877B1300065A65 /* CommentsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		AA42CEFF23809BB200BFB199 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		AA42CF012380B0BF00BFB199 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AA6E0F172380CEBE006BB207 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		AA86A0662389E5B10075616E /* ParsetagramDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParsetagramDebug.entitlements; sourceTree = "<group>"; };
+		AA9E4F2A23877B1300065A65 /* CommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
 		D69F4045DFFAE0EC0C684F31 /* Pods-Parsetagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parsetagram.release.xcconfig"; path = "Target Support Files/Pods-Parsetagram/Pods-Parsetagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,11 +89,13 @@
 		AA0247CE2380851000FB5020 /* Parsetagram */ = {
 			isa = PBXGroup;
 			children = (
+				AA86A0662389E5B10075616E /* ParsetagramDebug.entitlements */,
 				AA42CEFD23809B9200BFB199 /* LoginViewController.swift */,
 				AA42CEFF23809BB200BFB199 /* FeedViewController.swift */,
 				AA0247CF2380851000FB5020 /* AppDelegate.swift */,
 				AA0247D12380851000FB5020 /* SceneDelegate.swift */,
 				AA0247D52380851000FB5020 /* Main.storyboard */,
+				AA9E4F2A23877B1300065A65 /* CommentsCell.swift */,
 				AA6E0F172380CEBE006BB207 /* PostTableViewCell.swift */,
 				AA42CF012380B0BF00BFB199 /* CameraViewController.swift */,
 				AA0247D82380851200FB5020 /* Assets.xcassets */,
@@ -221,6 +226,7 @@
 				AA42CF0023809BB200BFB199 /* FeedViewController.swift in Sources */,
 				AA0247D22380851000FB5020 /* SceneDelegate.swift in Sources */,
 				AA6E0F182380CEBE006BB207 /* PostTableViewCell.swift in Sources */,
+				AA9E4F2B23877B1300065A65 /* CommentsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -365,6 +371,8 @@
 			baseConfigurationReference = 230325A67E762FBB793A3C24 /* Pods-Parsetagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Parsetagram/ParsetagramDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z22C9L53QJ;
 				INFOPLIST_FILE = Parsetagram/Info.plist;
@@ -375,6 +383,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SUPER.Parsetagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
